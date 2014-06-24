@@ -9,7 +9,7 @@ Define of input parameters are as follows:
  size -> new width and height, it must be tuple of integers, like (width, height)
  file_name -> new file name, string type
 """
-    #Triple quotation marks is used to specify doc string. Doc string can be accessed by the following command: <function name>.__doc__
+    #Triple quotation marks are used to specify doc string. Doc string can be accessed by the following command: <function name>.__doc__
     
     new_img = img.resize(size)
     new_img.save(file_name)
@@ -22,7 +22,7 @@ Define of input parameters are as follows:
  angle -> rotate angle, it can be integer or float type
  file_name -> new file name, string type
 """
-    #Triple quotation marks is used to specify doc string. Doc string can be accessed by the following command: <function name>.__doc__
+    #Triple quotation marks are used to specify doc string. Doc string can be accessed by the following command: <function name>.__doc__
     
     new_img = img.rotate(angle)
     new_img.save(file_name)
