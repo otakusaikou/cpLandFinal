@@ -1,0 +1,4 @@
+baboon.png
+Penguins.jpg
+Tulips.jpg
+flowers.tif
