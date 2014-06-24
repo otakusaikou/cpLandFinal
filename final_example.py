@@ -35,7 +35,7 @@ def main():
     #----------For question1----------#
     size = [(3.0 / 4), (1.0 / 2), (1.0 / 4)]  #Create resize ratio list. Make sure that the type of numerator is float
     
-    #Use for loop to create new image with all input filename
+    #Use for loop to create new image with all input filenames
     for i in range(len(all_image)):
         image_name = all_image[i].replace("\r", "").replace("\n", "")  #Replace invalid characters with empty string
         img = Image.open(image_name)  #Variable img is an image object
@@ -44,7 +44,7 @@ def main():
         #Use for loop to create new image with different resize ratio
         for j in range(len(size)):
             new_size = int(width * size[j]), int(height * size[j])  #The input height and width must be integer
-            f, e = os.path.splitext(image_name)  #Use this function can split filename into a base name and it's extension. Old extension name should not be used
+            f, e = os.path.splitext(image_name)  #This function can split filename into a base name and it's extension. Old extension name should not be used
             new_file_name = f + '_%dx%d' % new_size  #Use string formatting to create new filename automatically
             resize_image(img, new_size, new_file_name + ".jpg")
             resize_image(img, new_size, new_file_name + ".tif")
@@ -52,8 +52,8 @@ def main():
     #----------for question2----------#
     angle = [45, 90, 135, 180]  #Create rotate angle list
     image_name = all_image[0].replace("\r", "").replace("\n", "")  #Use first image name as input file name. Replace invalid characters with empty string
-    for i in range(len(angle)):  #Use for loop to create new image with different direction
-        f, e = os.path.splitext(image_name)  #Use this function can split filename into a base name and it's extension
+    for i in range(len(angle)):  #Use for loop to create new image with different rotate angles
+        f, e = os.path.splitext(image_name)  #This function can split filename into a base name and it's extension
         new_file_name = f + ('_rot_%d' % angle[i]) + e  #Use string formatting to create new filename automatically
         img = Image.open(image_name)  #Variable img is an image object
         rotate_image(img, angle[i], new_file_name)
